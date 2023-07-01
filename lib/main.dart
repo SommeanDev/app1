@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'Hompepage.dart';
+
+//import 'Hompepage.dart';
+
 void main(List<String> args) {
-  runApp(MyApp());
+  runApp(const MaterialApp(home: HomePage()));
 }
 
 class MyApp extends StatelessWidget {
@@ -57,6 +61,12 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Image.asset("assets/img1.jpg"),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
+                child: const Text("Click Me"))
           ],
         ),
       ),
